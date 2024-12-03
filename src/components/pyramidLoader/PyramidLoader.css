@@ -1,0 +1,93 @@
+/* Loader Container - Ensures the loader is centered */
+.pyramid-loader {
+    position: fixed;  /* Fixed position so it stays in place */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Align pyramid and text vertically */
+    background-color: rgb(255, 255, 255); /* Optional: a white background */
+    z-index: 9999; /* Ensures the loader is above the content */
+    text-align: center; /* Center the text below the pyramid */
+  }
+  
+  /* Wrapper - The spinning part of the pyramid */
+  .wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: spin 4s linear infinite;  /* Adjust the timing for the animation */
+  }
+  
+  /* Keyframe animation for spinning */
+  @keyframes spin {
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  /* Side of the pyramid, this will be repeated for each side */
+  .pyramid-loader .wrapper .side {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform-origin: center top;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  
+  /* Side 1 */
+  .pyramid-loader .wrapper .side1 {
+    transform: rotateZ(-30deg) rotateY(90deg);
+    background: conic-gradient(#000000, #000000, #D8CCE6, #03011d);
+  }
+  
+  /* Side 2 */
+  .pyramid-loader .wrapper .side2 {
+    transform: rotateZ(30deg) rotateY(90deg);
+    background: conic-gradient(#050221, #D8CCE6, #0a000b, #071d16);
+  }
+  
+  /* Side 3 */
+  .pyramid-loader .wrapper .side3 {
+    transform: rotateX(30deg);
+    background: conic-gradient(#03020d, #D8CCE6, #000000, #00100c);
+  }
+  
+  /* Side 4 */
+  .pyramid-loader .wrapper .side4 {
+    transform: rotateX(-30deg);
+    background: conic-gradient(#07100d, #000000, #D8CCE6, #282734);
+  }
+  
+  /* Shadow effect beneath the pyramid */
+  .pyramid-loader .wrapper .shadow {
+    width: 60px;
+    height: 60px;
+    background: #131216;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotateX(90deg) translateZ(-40px);
+    filter: blur(12px);
+  }
+  
+  /* Loading text below the pyramid */
+  .loading-text {
+    margin-top: 20px; /* Add space between the pyramid and the text */
+    font-size: 18px;
+    color: #000000;
+    font-weight: bold;
+  }
+  

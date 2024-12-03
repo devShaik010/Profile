@@ -3,7 +3,7 @@ import React from 'react'
 const Data = () => {
   return (
    <div className="home__data">
-     <h1 className="home__title">Syed Muqeem
+     <h1 className="home__title">Shaik Abrar
      <svg
                   width="36"
                   height="36"
@@ -55,12 +55,12 @@ const Data = () => {
                 </svg>
 
      </h1>
-     <h3 className="home__subtitle">Web Devloper</h3>
+     <h3 className="home__subtitle">Web + DevOps</h3>
 
-     <p className="home__description">An IT undergrad (2026) who is passionate towards Web Development.</p>
+     <p className="home__description">An CSE undergrad (2026) who is passionate towards Web Development and  Cloud Technologies .</p>
 
      <a href="#contact" className="button button--flex"> 
-        say Hello
+       Say Hello
         <svg
                   class="button__icon"
                   xmlns="http://www.w3.org/2000/svg"
