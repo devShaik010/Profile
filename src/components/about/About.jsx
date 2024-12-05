@@ -18,7 +18,7 @@ const About = () => {
                 <Info/>
                 <p className="about__description">Full Stack MERN Developer with Cloud Expertise...</p>
 
-                <a download="" href={Resume} className="button button--flex  center">Download Resume
+                <a download="" href="#" className="button button--flex  center">Download Resume
                 <svg
                 class="button__icon"
                 xmlns="http://www.w3.org/2000/svg"
